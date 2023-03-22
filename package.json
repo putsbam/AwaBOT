@@ -1,16 +1,19 @@
 {
-  "name": "nodejs",
+  "name": "json-lvlbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Leveling bot using JSON as database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@types/node": "^18.0.6",
-    "node-fetch": "^3.2.6"
-  }
+    "discord.js": "^12.3.1",
+    "ascii-table": "^0.0.9",
+    "express": "^4.17.1",
+    "dotenv": "10.0.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT"
 }
