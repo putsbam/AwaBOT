@@ -1,7 +1,8 @@
+require('app-module-path').addPath(__dirname);
 const { Client, Collection } = require("discord.js");
 const fs = require("fs");
 const client = new Client({
-    disableEveryone: true
+  disableEveryone: true
 });
 require('dotenv').config()
 
@@ -14,23 +15,23 @@ client.categories = fs.readdirSync("./commands/");
 // Loading Commands
 
 ["command"].forEach(handler => {
- require(`./handlers/${handler}`)(client);
+  require(`./handlers/${handler}`)(client);
 })
- 
+
 // Loading Events
 
 fs.readdir("./events/", (err, files) => {
-  
+
   if (err) return console.error(err);
-  if(!files) return 
-   
+  if (!files) return
+
   files.forEach(file => {
     const event = require(`./events/${file}`);
     let eventName = file.split(".")[0];
     client.on(eventName, event.bind(null, client))
-    
+
     console.log(`Event Loaded: ${eventName}`)
-    
+
   })
 })
 
@@ -51,4 +52,4 @@ app.listen(process.env.PORT);
 
 client.login(process.env.TOKEN).catch(err => console.log(err))
 
- 
+
