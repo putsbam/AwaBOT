@@ -74,7 +74,7 @@ module.exports = (client) => {
               if (voiceMember) {
 
                 userAsMember.voice.setChannel(null)
-                embed.setFooter("DISCONNECTED")
+                embed.setFooter("DISCONNECTED FROM VOICE CHANNEL")
 
               } else embed.setFooter("NOT CONNECTED TO VOICE CHANNEL")
 
