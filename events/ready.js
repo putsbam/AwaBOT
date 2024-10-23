@@ -17,7 +17,7 @@ module.exports = (client) => {
 
     status: 'online',
     activity: {
-      name: `amo a robi <3 - bam`,
+      name: `bam`,
       type: `WATCHING`,
     }
 

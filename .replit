@@ -87,3 +87,11 @@ start = "typescript-language-server --stdio"
 
 [deployment]
 run = ["sh", "-c", "node index.js"]
+
+[[ports]]
+localPort = 34757
+externalPort = 80
+
+[[ports]]
+localPort = 38077
+externalPort = 3000
